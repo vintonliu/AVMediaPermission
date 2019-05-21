@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T6b-qu-nru"/>
+                        <viewControllerLayoutGuide type="bottom" id="K6P-00-Zgh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaN-rX-cuq">
+                                <rect key="frame" x="167" y="204" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Pov-29-YlH"/>
+                                    <constraint firstAttribute="width" constant="80" id="icN-7w-XoW"/>
+                                </constraints>
+                                <state key="normal" title="音频权限">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnAudioClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dFb-rb-J7q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFG-b4-PDc">
+                                <rect key="frame" x="167" y="294" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="视频权限">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBtnVideoClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iYQ-Us-kQo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="权限申请" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRT-zT-hCl">
+                                <rect key="frame" x="172.5" y="396" width="69.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KAM-Km-4qK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PaN-rX-cuq" firstAttribute="top" secondItem="T6b-qu-nru" secondAttribute="bottom" constant="160" id="LYC-es-F5I"/>
+                            <constraint firstItem="hFG-b4-PDc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M9M-z6-A2X"/>
+                            <constraint firstItem="tRT-zT-hCl" firstAttribute="top" secondItem="hFG-b4-PDc" secondAttribute="bottom" constant="72" id="Maw-f2-Ey7"/>
+                            <constraint firstItem="hFG-b4-PDc" firstAttribute="width" secondItem="PaN-rX-cuq" secondAttribute="width" id="U7l-Ob-vWq"/>
+                            <constraint firstItem="hFG-b4-PDc" firstAttribute="height" secondItem="PaN-rX-cuq" secondAttribute="height" id="f4J-PV-ehw"/>
+                            <constraint firstItem="tRT-zT-hCl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kDe-8j-02J"/>
+                            <constraint firstItem="hFG-b4-PDc" firstAttribute="top" secondItem="PaN-rX-cuq" secondAttribute="bottom" constant="60" id="mwD-1J-0Tk"/>
+                            <constraint firstItem="PaN-rX-cuq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="onN-BF-odq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_btnAudio" destination="PaN-rX-cuq" id="0Xr-cv-JjU"/>
+                        <outlet property="_btnVideo" destination="hFG-b4-PDc" id="H4J-W0-P8h"/>
+                        <outlet property="_lblTips" destination="tRT-zT-hCl" id="WTc-E5-YbO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
